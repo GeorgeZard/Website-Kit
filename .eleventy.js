@@ -2,6 +2,7 @@
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 
 // Configs
 const configCss = require("./src/config/css");
@@ -56,7 +57,10 @@ module.exports = function (eleventyConfig) {
      *  https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap
      */
     eleventyConfig.addPlugin(pluginSitemap, configSitemap);
-
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/assets/images",
+        outputDir: "public/assets/images",
+    });
     /**
      *  MINIFIER 
      *  When in production ("npm run build" is ran), minify all HTML, CSS, JSON, XML, XSL and webmanifest files.
@@ -65,6 +69,7 @@ module.exports = function (eleventyConfig) {
     if (isProduction) {
         eleventyConfig.addPlugin(pluginMinifier);
     }
+   
     /**=====================================================================
                                 END PLUGINS
     =======================================================================*/
