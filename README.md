@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/347085e6-43e6-4915-b570-b109fa060f7d/deploy-status)](https://app.netlify.com/sites/extraordinary-bombolone-02faa7/deploys)
 <br/>
 <p align="center">
   <a href="https://codestitch.app/">
