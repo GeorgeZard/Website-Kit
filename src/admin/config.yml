@@ -17,6 +17,7 @@ collections:
       slug: "{{slug}}"
       fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Category", name: "category", widget: "string" }
           - {
                 label: "URL Slug",
                 name: "url",

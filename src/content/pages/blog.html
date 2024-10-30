@@ -42,6 +42,8 @@ eleventyNavigation:
             {% if collections.post | length == 0 %}
                 <h1>No Recent Posts</h1>
             {% else %}
+            {# {% for category in collections.post | groupby("data.category") %} #}
+                <h2>{{ category.name }}</h2>
                 {%- for post in collections.post | reverse -%}
                     <article class="recent-articles">
                         <!--Main Article Image-->
@@ -80,6 +82,7 @@ eleventyNavigation:
                         </div>
                     </article>
                 {%- endfor -%}
+            {# {% endfor %} #}
             {% endif %}
         </div>
 
